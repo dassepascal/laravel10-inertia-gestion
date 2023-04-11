@@ -16,11 +16,13 @@ class PosteFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+     protected $model = Poste::class;
     public function definition(): array
     {
         return [
             'title' => $this->faker->sentence,
-            'description' => $this->faker->paragraph,
+            'description' => $this->faker->text,
             'lien' => $this->faker->url,
             'user_id' =>User:: all()-> random()->id,
             'enterprise_id' =>Enterprise::all()-> random()->id,

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Poste;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class PosteController extends Controller
 {
@@ -12,7 +13,11 @@ class PosteController extends Controller
      */
     public function index()
     {
-        //
+
+       $poste= Poste::all();
+        return Inertia::render('Postes/Index',[
+            'postes' => $poste,
+        ]);
     }
 
     /**

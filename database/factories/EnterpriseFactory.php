@@ -15,6 +15,9 @@ class EnterpriseFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+protected $model = Enterprise::class;
+
     public function definition(): array
     {
         return [
