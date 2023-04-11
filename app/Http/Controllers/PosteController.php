@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
 use App\Models\Poste;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
+use Illuminate\Support\Facades\DB;
 
 class PosteController extends Controller
 {
@@ -14,9 +15,14 @@ class PosteController extends Controller
     public function index()
     {
 
-       $poste= Poste::all();
+        $postes = DB::table('postes')
+        ->join('enterprises', 'postes.enterprise_id', '=', 'enterprises.id')
+        ->select('postes.*', 'enterprises.name as enterprise_name')
+        ->where('postes.user_id', '=', auth()->user()->id)
+        ->get();
+     
         return Inertia::render('Postes/Index',[
-            'postes' => $poste,
+            'postes' => $postes,
         ]);
     }
 

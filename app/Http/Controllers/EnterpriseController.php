@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Inertia\Inertia;
 use App\Models\Enterprise;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class EnterpriseController extends Controller
 {
@@ -13,9 +14,10 @@ class EnterpriseController extends Controller
      */
     public function index()
     {
-        $enterprise = Enterprise::all();
+        $enterprises = DB::table('enterprises')->where('user_id', '=', auth()->user()->id)->get();
+    
         return Inertia::render('Enterprises/Index', [
-            'enterprises' => $enterprise,
+            'enterprises' => $enterprises,
         ]);
     }
 

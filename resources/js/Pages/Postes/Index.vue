@@ -7,14 +7,17 @@
             <div class="mx-8 bg-white rounded shadow p-4">
                 <div class="text-4xl">{{ poste.title }}</div>
                 <div>
-                <span class="text-gray-500">Description :</span>
+                    <span class="text-gray-500">Description :</span>
                     <div class=" text-sm">{{ poste.description }}</div>
                 </div>
 
-                <div class="text-gray-500" ><span class="text-black">Lien :</span>  {{ poste.lien }}</div>
+                <div> <span class="text-gray-500">Enterprise :</span> {{ poste.enterprise_name }}</div>
+                <div><span class="text-gray-500">Lien :</span> {{ poste.lien }}</div>
 
                 <div class="text-sm text-gray-500">Publié le {{ poste.created_at }}</div>
-                <a href="#" class="bg-indigo-500 text-white px-2 py-1 text-sm mt-3 inline-block rounded hover:bg-indigo-700">Voir le poste</a>
+                <a href="#"
+                    class="bg-indigo-500 text-white px-2 py-1 text-sm mt-3 inline-block rounded hover:bg-indigo-700">Voir le
+                    poste</a>
             </div>
 
         </div>
