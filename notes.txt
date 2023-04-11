@@ -1,0 +1,7 @@
+
+https://jetstream.laravel.com/3.x/installation.html
+
+install jetstream
+composer require laravel/jetstream
+
+php artisan jetstream:install inertia
