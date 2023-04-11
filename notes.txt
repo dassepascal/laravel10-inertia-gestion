@@ -5,3 +5,11 @@ install jetstream
 composer require laravel/jetstream
 
 php artisan jetstream:install inertia
+
+creation factory php artisan make:factory PosteFactory --model=Poste
+creation seeder : php artisan make:seeder PosteSeeder
+
+creation du dossier Postes dans resources/pages
+creation Index.vue
+creation de la route
+
