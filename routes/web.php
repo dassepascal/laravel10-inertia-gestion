@@ -4,6 +4,7 @@ use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\PosteController;
+use App\Http\Controllers\EnterpriseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,7 @@ Route::get('/', function () {
 });
 
 Route::get('/postes', [PosteController::class, 'index'])->name('postes');
+Route::get('/enterprises', [EnterpriseController::class, 'index'])->name('enterprises');
 
 
 Route::middleware([
