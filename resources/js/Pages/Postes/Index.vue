@@ -3,9 +3,13 @@
         <template #header>
             Postes
         </template>
-        <div v-for="poste in this.posteList" v-bind:key="poste.id">
-        <div>{{ poste.title }}</div>
-        <div>{{ poste.description }}</div>
+        <div class="py-3" v-for="poste in this.posteList" v-bind:key="poste.id">
+            <div class="mx-8 bg-white rounded shadow p-4">
+                <div class="text-4xl">{{ poste.title }}</div>
+                <div text-sm->{{ poste.description }}</div>
+                <a href="#" class="bg-indigo-500 text-white px-2 py-1 text-sm mt-3 inline-block rounded hover:bg-indigo-700">Voir le poste</a>
+            </div>
+
         </div>
 
     </app-layout>
