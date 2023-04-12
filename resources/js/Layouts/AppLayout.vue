@@ -53,10 +53,11 @@ const logout = () => {
                                 </NavLink>
                             </div>
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink :href="route('postes')" :active="route().current('postes')">
-                                    Postes
+                                <NavLink :href="route('candidatures')" :active="route().current('candidatures')">
+                                    Candidatures
                                 </NavLink>
                             </div>
+
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <NavLink :href="route('enterprises')" :active="route().current('enterprises')">
                                   Enterprises
@@ -206,10 +207,12 @@ const logout = () => {
                         </ResponsiveNavLink>
                     </div>
                     <div class="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink :href="route('postes')" :active="route().current('postes')">
-                           Postes
+                        <ResponsiveNavLink :href="route('candidatures')" :active="route().current('candidatures')">
+                     Candidatures
                         </ResponsiveNavLink>
                     </div>
+
+
                     <div class="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink :href="route('enterprises')" :active="route().current('enterprises')">
                    Enterprises

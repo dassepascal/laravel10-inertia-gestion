@@ -2,17 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Models\Poste;
+use App\Models\Candidature;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class PosteSeeder extends Seeder
+class CandidatureSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Poste::factory(10)->create();
+        Candidature::factory(10)->create();
     }
 }

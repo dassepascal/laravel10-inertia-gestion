@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use App\Models\Poste;
 use App\Models\Enterprise;
+use App\Models\Candidature;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,7 +23,8 @@ class DatabaseSeeder extends Seeder
         // ]);
         User::factory(10)->create();
         Enterprise::factory(10)->create();
-        Poste::factory(10)->create();
+        Candidature::factory(10)->create();
+      
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
